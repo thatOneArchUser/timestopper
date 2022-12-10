@@ -17,8 +17,7 @@ std::string exec(const char* cmd) {
 }
 
 int main() {
-	const std::string time = exec("time /t");
-	const std::string cmd = "time " + time;
+	const std::string cmd = "time " + exec("time /t");
 	
 	std::cout << "Current time: " << time << std::flush;
 	std::cout << "Stopping time!" << std::flush;
